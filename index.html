@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Base — Understand Your Patterns</title>
-<meta name="description" content="Base helps people with chronic conditions track symptoms, spot real patterns, and walk into doctor visits prepared. Coming soon — join the waitlist.">
+<title>Base: Understand Your Patterns</title>
+<meta name="description" content="Base helps people with chronic conditions track symptoms, spot real patterns, and walk into doctor visits prepared. Coming soon. Join the waitlist.">
 
 <!-- Open Graph / social sharing previews -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Base — Understand Your Patterns">
-<meta property="og:description" content="Track symptoms, spot real patterns, and be believed by your doctor. Coming soon to iOS — join the waitlist.">
+<meta property="og:title" content="Base: Understand Your Patterns">
+<meta property="og:description" content="Track symptoms, spot real patterns, and be believed by your doctor. Coming soon to iOS. Join the waitlist.">
 <meta property="og:image" content="https://base-track.github.io/og-image.png">
 <meta property="og:url" content="https://base-track.github.io/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Base — Understand Your Patterns">
-<meta name="twitter:description" content="Track symptoms, spot real patterns, and be believed by your doctor. Coming soon to iOS — join the waitlist.">
+<meta name="twitter:title" content="Base: Understand Your Patterns">
+<meta name="twitter:description" content="Track symptoms, spot real patterns, and be believed by your doctor. Coming soon to iOS. Join the waitlist.">
 <meta name="twitter:image" content="https://base-track.github.io/og-image.png">
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -186,14 +186,31 @@
   }
   .phone-frame {
     width: 100%;
-    background: var(--card);
-    border: 2px solid var(--border);
-    border-radius: 28px;
-    padding: 8px;
+    background: #000;
+    border: 1px solid #2c2c30;
+    border-radius: 44px;
+    padding: 12px;
   }
-  .phone-frame img {
+  .phone-screen {
+    position: relative;
+    overflow: hidden;
+    border-radius: 32px;
+    background: var(--bg);
+  }
+  .phone-screen img {
     width: 100%;
-    border-radius: 20px;
+    display: block;
+  }
+  .dynamic-island {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32%;
+    height: 18px;
+    background: #000;
+    border-radius: 999px;
+    z-index: 2;
   }
   .screen-caption {
     margin: 14px 0 0;
@@ -204,26 +221,26 @@
 
   /* Founder story */
   section.founder {
-    padding: 8px 0 48px;
+    padding: 64px 0 72px;
   }
   .founder-inner {
-    max-width: 560px;
+    max-width: 640px;
     margin: 0 auto;
     text-align: center;
   }
   .founder-label {
     display: block;
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
     color: var(--accent);
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 22px;
   }
   .founder-quote {
-    font-size: 1.08rem;
+    font-size: 1.45rem;
     font-style: italic;
-    line-height: 1.65;
+    line-height: 1.6;
     color: var(--text);
     margin: 0;
   }
@@ -376,6 +393,7 @@
     .steps { grid-template-columns: repeat(3, 1fr); }
     .step { flex-direction: column; }
     .screens-grid { flex-direction: row; justify-content: center; align-items: flex-start; gap: 24px; }
+    .founder-quote { font-size: 1.65rem; }
   }
 </style>
 </head>
@@ -397,7 +415,7 @@
     </svg>
 
     <h1>Understand your patterns.<br>Be believed by your doctor.</h1>
-    <p class="sub">Base helps you track symptoms, spot the real connections behind your flares — sleep, weather, food, stress — and walk into every appointment prepared.</p>
+    <p class="sub">Base helps you track symptoms, spot the real connections behind your flares (sleep, weather, food, stress), and walk into every appointment prepared.</p>
 
     <div class="badge"><span class="dot"></span> Coming soon to iOS</div>
 
@@ -408,7 +426,7 @@
         <button type="submit">Join the waitlist</button>
         <p class="status" id="waitlist-status" role="status"></p>
       </form>
-      <p class="fineprint">No spam — just a note when Base is ready to download.</p>
+      <p class="fineprint">No spam, just a note when Base is ready to download.</p>
     </div>
   </section>
 
@@ -417,19 +435,28 @@
     <div class="screens-grid">
       <div class="screen-item">
         <div class="phone-frame">
-          <img src="screenshots/today.png" alt="Base app Today screen with severity sliders for pain, fatigue and brain fog, a mood picker, and medication tracking" loading="lazy" width="294" height="640">
+          <div class="phone-screen">
+            <div class="dynamic-island"></div>
+            <img src="screenshots/today.png" alt="Base app Today screen with severity sliders for pain, fatigue and brain fog, a mood picker, and medication tracking" loading="lazy" width="294" height="640">
+          </div>
         </div>
         <p class="screen-caption">Log how you feel in seconds</p>
       </div>
       <div class="screen-item">
         <div class="phone-frame">
-          <img src="screenshots/insights.png" alt="Base app Insights screen showing statistically backed connections between flare severity, weather and sleep" loading="lazy" width="294" height="640">
+          <div class="phone-screen">
+            <div class="dynamic-island"></div>
+            <img src="screenshots/insights.png" alt="Base app Insights screen showing statistically backed connections between flare severity, weather and sleep" loading="lazy" width="294" height="640">
+          </div>
         </div>
         <p class="screen-caption">See the patterns behind your flares</p>
       </div>
       <div class="screen-item">
         <div class="phone-frame">
-          <img src="screenshots/paywall.png" alt="Base Pro upgrade screen with pattern insights and doctor report features" loading="lazy" width="294" height="640">
+          <div class="phone-screen">
+            <div class="dynamic-island"></div>
+            <img src="screenshots/paywall.png" alt="Base Pro upgrade screen with pattern insights and doctor report features" loading="lazy" width="294" height="640">
+          </div>
         </div>
         <p class="screen-caption">Unlock deeper insights with Pro</p>
       </div>
@@ -439,7 +466,7 @@
   <section class="founder">
     <div class="founder-inner">
       <span class="founder-label">Why I built this</span>
-      <p class="founder-quote">I built Base after watching how hard it is to be taken seriously by doctors when you're managing a chronic condition that doesn't show up on a scan. Logging should take seconds, not become its own burden — and your data should actually help you get believed, not just sit in an app nobody reads.</p>
+      <p class="founder-quote">I built Base after watching how hard it is to be taken seriously by doctors when you're managing a chronic condition that doesn't show up on a scan. Logging should take seconds, not become its own burden. And your data should actually help you get believed, not just sit in an app nobody reads.</p>
     </div>
   </section>
 
@@ -450,7 +477,7 @@
         <div class="num">1</div>
         <div>
           <h3>Log in seconds</h3>
-          <p>A few taps a day — pain, fatigue, sleep, mood, and whatever else might be a trigger.</p>
+          <p>A few taps a day: pain, fatigue, sleep, mood, and whatever else might be a trigger.</p>
         </div>
       </div>
       <div class="step">
@@ -473,7 +500,7 @@
   <section class="disclaimer-wrap">
     <div class="disclaimer">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-      <span>Base shows patterns in your logged data — it's informational, not a diagnosis. It is not a medical device and does not treat or provide medical advice. Always consult a doctor before making medical decisions.</span>
+      <span>Base shows patterns in your logged data. It's informational, not a diagnosis. It is not a medical device and does not treat or provide medical advice. Always consult a doctor before making medical decisions.</span>
     </div>
   </section>
 
@@ -486,7 +513,7 @@
       </details>
       <details class="faq-item">
         <summary>When does Base launch?</summary>
-        <p>We're finishing up development now — join the waitlist above and you'll be the first to know when it's live.</p>
+        <p>We're finishing up development now. Join the waitlist above and you'll be the first to know when it's live.</p>
       </details>
       <details class="faq-item">
         <summary>Will logging always be free?</summary>
@@ -532,11 +559,11 @@
           status.textContent = "You're on the list. Thanks!";
           status.className = 'status ok';
         } else {
-          status.textContent = 'Something went wrong — please try again.';
+          status.textContent = 'Something went wrong. Please try again.';
           status.className = 'status err';
         }
       }).catch(function () {
-        status.textContent = 'Something went wrong — please try again.';
+        status.textContent = 'Something went wrong. Please try again.';
         status.className = 'status err';
       });
     });
